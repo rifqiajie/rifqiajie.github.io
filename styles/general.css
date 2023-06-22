@@ -1,0 +1,380 @@
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #1d1d1f;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: inherit;
+}
+
+body {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* HEADER */
+
+.ComingSoon {
+    position: absolute;
+    margin: 10px auto auto 80px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: xx-small;
+    top: 0;
+    background-color: #9D44FD;
+    color: white;
+    filter: drop-shadow(-2px 2px 2px rgba(0, 0, 0, .3));
+}
+
+.ComingSoon2 {
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: -20px auto auto 50px;
+    font-size: xx-small;
+    background-color: #9D44FD;
+    color: white;
+    filter: drop-shadow(-2px 2px 2px rgba(0, 0, 0, .3));
+}
+
+#homearea {
+    height: 100vh;
+    background-color: #f5f5f7;
+}
+
+#bagianHeader {
+    display: block;
+    z-index: 10;
+    top: 0;
+    position: sticky;
+    align-content: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background: rgba(255, 255, 255, .90);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+#navigasi {
+    display: flex;
+    max-width: 1400px;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    user-select: none;
+    filter: drop-shadow (0px 0px 7px #fff);
+}
+
+.hoverableItem {
+    opacity: 75%;
+    transition: 200ms;
+}
+
+.hoverableItem:hover {
+    opacity: 100%;
+}
+
+#navigasiMenu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.myIcons {
+    font-size: x-large;
+    margin-right: .5em;
+    background-image: linear-gradient(135deg, #5D2EFF, #9D44FD 50%, #BC73E9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navigasiMenuItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 2em;
+    font-weight: 500;
+}
+
+.navigasiSocialItem {
+    margin: 0 1em;
+}
+
+#carouselArea {
+    display: flex;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    width: 1400px;
+    height: 130px;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 15px;
+}
+
+#nftCarouselBg {
+    position: absolute;
+    z-index: -1;
+    width: 1400px;
+    height: 100px;
+    background: #f5f5f7;
+}
+
+
+@-webkit-keyframes scroll {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: -1400px;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: -1400px;
+    }
+}
+
+
+.carouselBox {
+    display: block;
+    position: relative;
+    -webkit-animation: scroll 20s linear infinite;
+    animation: scroll 20s linear infinite;
+}
+
+.carouselBlock {
+    left: 200px;
+    width: 1400px;
+    display: flex;
+    justify-content: space-around;
+    flex-shrink: 0;
+}
+
+#carouselArea:hover .carouselBox {
+    animation-play-state: paused;
+}
+
+.nftItems {
+    height: 100px;
+    width: 100px;
+}
+
+.nftItems img {
+    max-width: 100%;
+    transition: 100ms;
+    border-radius: 10px;
+}
+
+.nftItems img:hover {
+    transform: scale(1.2);
+}
+
+#mainLogo {
+    margin: 20px auto 0;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 310px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    background-image: url("../images/layer-bawah.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#childLogo {
+    transform: translateZ(30px);
+    width: 250px;
+    height: 310px;
+    background-image: url("../images/layer-atas.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+h1 {
+    background-color: #1d1d1f;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-weight: 800;
+    font-size: 50px;
+    margin-top: .25em;
+    user-select: none;
+}
+
+h2 {
+    color: #bf4800;
+}
+
+h2 {
+    margin-top: .5em;
+    text-align: center;
+    font-style: italic;
+    user-select: none;
+}
+
+#maindesc {
+    margin: 0.25em auto;
+    max-width: 500px;
+    text-align: center;
+    font-size: x-large;
+    line-height: 150%;
+    user-select: none;
+}
+
+.controls {
+    margin-top: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.siteButtons {
+    padding: .5em 3em;
+    color: black;
+    margin: auto;
+    font-size: x-large;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    background-color: #8E8E93;
+    transition: 200ms;
+}
+
+.siteButtons:hover {
+    color: white;
+    background-color: #0371E2;
+}
+
+/* ROADMAP */
+#RoadmapSection {
+    display: inline-block;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+#RoadmapContainer {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    width: 1400px;
+    height: 100vh;
+}
+
+.RoadmapRows {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.RoadmapRowsL {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.RoadmapRowsL * {
+    text-align: right;
+}
+
+.RoadmapRowsR * {
+    text-align: left;
+}
+
+.RoadmapLabelL {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 10px;
+    gap: 10px;
+}
+
+.RoadmapLabelText {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.RoadmapLabelIcon {
+    display: flex;
+    align-items: stretch;
+}
+
+.RoadmapRowsC {
+    width: 138px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate;
+}
+
+.RoadmapRowsR {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.RoadmapBullets {
+    transition: .5s;
+}
+
+.RoadmapBullets:hover {
+    scale: 120%;
+}
+
+/* RARITY */
+#RaritySection {
+    display: inline-block;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5f5f7;
+}
+
+/* STAKING */
+#StakingSection {
+    display: inline-block;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1d1d1f;
+}
+
+/* STORE */
+#StoreSection {
+    display: inline-block;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* FOOTER */
+
+#copyrightSection {
+    margin-top: 4em;
+    background-color: #f5f5f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
